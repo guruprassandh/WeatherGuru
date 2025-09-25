@@ -16,7 +16,7 @@ def home():
 def weather():
     city = request.form.get("city")
     if not city:
-        return "City not provided!", 400
+        return "City not found!", 400
 
     # Send a request to WeatherAPI
     params = {
@@ -35,3 +35,4 @@ def weather():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
